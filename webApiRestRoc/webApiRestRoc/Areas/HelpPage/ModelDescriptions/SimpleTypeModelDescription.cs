@@ -1,0 +1,6 @@
+namespace webApiRestRoc.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}

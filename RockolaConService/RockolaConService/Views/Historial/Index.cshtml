@@ -1,0 +1,41 @@
+﻿@model IEnumerable<RockolaConService.Models.Video>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>se consume la api del historial!!!!!!!!</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    
+    <th>id</th>
+    <th>videoId</th>
+    <th>videoName </th>
+    <th></th>
+
+
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.videoName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.videoId)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+
+</table>

@@ -1,0 +1,31 @@
+﻿@model List<Google.Apis.YouTube.v3.Data.SearchResult>
+
+
+@{
+    ViewBag.Title = "SearchList";
+}
+
+<h2>SearchList</h2>
+
+@foreach (var item in ViewBag.lista)
+{
+    @*<div class="row">
+            <div class="col-md-4">
+                <div id="idvidd" data-name="@item.Id.VideoId"></div>
+                <br>@item.Snippet.Title<br />
+
+            </div>
+
+
+        </div>*@
+    <div>@item.Snippet.Title</div>
+    <p><a class="btn btn-default" href="javascript:void(0)" onclick="btnAgregar()">Agregar a lista </a></p>
+    <img class="img-responsive" src="http://img.youtube.com/vi/@item.Id.VideoId/mqdefault.jpg">
+
+
+
+
+
+
+}
+
